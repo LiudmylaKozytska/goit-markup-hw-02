@@ -2,32 +2,23 @@
 :root {
     --color-white: #fff;
     --color-black: #000;
-    --primary-background-color: #f5f5f5;
-    --secondary-background-color: #F5F4FA;
+    --button-background-color: #F5F4FA;
     --footer-background-color: #2F303A;
     --color-decoration: #2196F3;
     --color-text: #757575;
     --color-title: #212121;
     --contacts-text-color: rgba(255, 255, 255, 0.6);
+    --color-button-active: #188CE8;
 }
 /* головне */
 body {
     font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
         font-size: 14px;
         line-height: 1.7;
         letter-spacing: 0.03em;
         color: var(--color-text);
 }
 /* навігація */
-.web {
-    font-family: 'Raleway';
-        font-weight: 700;
-        font-size: 26px;
-        line-height: 1.2;
-        color: var(--color-decoration);
-}
 .studio {
     font-family: 'Raleway';
         font-weight: 700;
@@ -35,7 +26,7 @@ body {
         line-height: 1.2;
         color: var(--color-black);
 }
-.list {
+.project-list {
     list-style-type: none;
 }
 .link {
@@ -49,6 +40,13 @@ body {
 .link:hover,
 .link:focus,
 .link:active {
+    color: var(--color-decoration);
+}
+.web {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
     color: var(--color-decoration);
 }
 .home {
@@ -65,10 +63,11 @@ body {
     color: var(--color-white);
 }
 .main-button {
-    cursor: pointer;
     width: 216px;
     height: 50px;
     background-color: var(--color-decoration);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
     font-family: 'Roboto';
         font-weight: 700;
         font-size: 16px;
@@ -77,12 +76,15 @@ body {
 }
 .main-button:hover,
 .main-button:focus {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-        border-radius: 4px;
+    background-color: var(--color-button-active);
+}
+.btn {
+    border: none;
+    cursor: pointer;
 }
 /* особливості */
 .main-background {
-    background-color: var(--primary-background-color);
+    background-color: var(--color-white);
 }
 .visually-hidden {
     position: absolute;
@@ -97,7 +99,6 @@ body {
     margin: -1px;
 }
 .advantage-title {
-    font-weight: 700;
     font-size: 14px;
     line-height: 1.15;
     text-transform: uppercase;
@@ -112,9 +113,9 @@ body {
 }
 /* команда */
 .team {
-    background-color: var(--secondary-background-color);
+    background-color: var(--button-background-color);
 }
-.image-item {
+.team-item {
     background-color: var(--color-white);
 }
 .team-leader {
@@ -131,17 +132,19 @@ body {
 .foot {
     background-color: var(--footer-background-color);
 }
-.studio-footer {
+.logo-footer {
     font-family: 'Raleway';
         font-weight: 700;
         font-size: 26px;
         line-height: 1.2;
     color: var(--color-white);
 }
-.map,
-.map:hover,
-.map:focus {
+.map {
     color: var(--color-white);
+}
+.map:hover,
+.map:focus{
+    color: var(--color-white)
 }
 .contacts {
     color: var(--contacts-text-color);
@@ -152,15 +155,16 @@ body {
 }
 /* портфоліо */
 .portfolio-menu {
-    background-color: var(--secondary-background-color);
+    font-family: inherit;
+    background-color: var(--button-background-color);
     color: var(--color-title);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.6;
+    border-radius: 4px;
 }
 .portfolio-menu:hover,
 .portfolio-menu:focus {
-    cursor: pointer;
     background-color: var(--color-decoration);
     color: var(--color-white);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
