@@ -142,10 +142,6 @@ body {
 .map {
     color: var(--color-white);
 }
-.map:hover,
-.map:focus{
-    color: var(--color-white)
-}
 .contacts {
     color: var(--contacts-text-color);
 }
